@@ -54,7 +54,6 @@ public class AbstractSettersTest extends BlackbirdTestBase
     {
         FooImpl1 item = new FooImpl1();
         String string = MAPPER.writer()
-                .without(SerializationFeature.WRITE_DATES_AS_TIMESTAMPS)
                 .writeValueAsString(item);
         FooBase read = MAPPER.readValue(string, FooBase.class);
         assertNotNull(read);
