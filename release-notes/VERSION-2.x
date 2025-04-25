@@ -23,7 +23,11 @@ Active maintainers:
 === Releases ===
 ------------------------------------------------------------------------
 
-2.19.0 (not yet released)
+2.20.0 (not yet released)
+
+-
+
+2.19.0 (24-Apr-2025)
 
 #268: Unify testing structure/tools [JSTEP-10]
  (contributed by Joo-Hyuk K)
