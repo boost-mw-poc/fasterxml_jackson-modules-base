@@ -36,6 +36,7 @@ Active maintainers:
  (reported, fix contributed by Apoorva M)
 #290: Update Paranamer dep from 2.8 to 2.8.3
 
+2.18.4 (06-May-2025)
 2.18.3 (28-Feb-2025)
 2.18.2 (27-Nov-2024)
 2.18.1 (28-Oct-2024)
