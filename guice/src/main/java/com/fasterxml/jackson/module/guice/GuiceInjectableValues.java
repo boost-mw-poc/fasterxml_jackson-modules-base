@@ -12,11 +12,19 @@ public class GuiceInjectableValues extends InjectableValues
 
   public GuiceInjectableValues(Injector injector) {this.injector = injector;}
 
+  @Deprecated // since 2.20
   @Override
   public Object findInjectableValue(
-      Object valueId, DeserializationContext ctxt, BeanProperty forProperty, Object beanInstance
-  )
+      Object valueId, DeserializationContext ctxt, BeanProperty forProperty, Object beanInstance)
   {
-    return injector.getInstance((Key<?>) valueId);
+      return injector.getInstance((Key<?>) valueId);
+  }
+
+  @Override
+  public Object findInjectableValue(
+      Object valueId, DeserializationContext ctxt, BeanProperty forProperty, Object beanInstance,
+      Boolean optional)
+  {
+      return injector.getInstance((Key<?>) valueId);
   }
 }

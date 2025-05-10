@@ -23,10 +23,19 @@ public class OsgiInjectableValues extends InjectableValues
     {
         this.bundleContext = bundleContext;
     }
-    
+
+    @Deprecated // since 2.20
+    @Override
+    public Object findInjectableValue(
+        Object valueId, DeserializationContext ctxt, BeanProperty forProperty, Object beanInstance)
+    {
+        return findInjectableValue(valueId, ctxt, forProperty, beanInstance, null);
+    }
+
     @Override
     public Object findInjectableValue(Object valueId,
-            DeserializationContext ctxt, BeanProperty forProperty, Object beanInstance)
+            DeserializationContext ctxt, BeanProperty forProperty, Object beanInstance,
+            Boolean optional)
     {
         return findService(serviceType(forProperty), serviceFilter(valueId));
     }
