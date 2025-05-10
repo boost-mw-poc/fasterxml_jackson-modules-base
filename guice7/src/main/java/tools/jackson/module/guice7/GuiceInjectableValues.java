@@ -14,10 +14,10 @@ public class GuiceInjectableValues extends InjectableValues
 
   @Override
   public Object findInjectableValue(
-      Object valueId, DeserializationContext ctxt, BeanProperty forProperty, Object beanInstance
-  )
+      Object valueId, DeserializationContext ctxt, BeanProperty forProperty, Object beanInstance,
+      Boolean optional)
   {
-    return injector.getInstance((Key<?>) valueId);
+      return injector.getInstance((Key<?>) valueId);
   }
 
   @Override

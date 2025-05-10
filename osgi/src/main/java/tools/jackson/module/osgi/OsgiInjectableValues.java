@@ -32,7 +32,8 @@ public class OsgiInjectableValues extends InjectableValues
     
     @Override
     public Object findInjectableValue(Object valueId,
-            DeserializationContext ctxt, BeanProperty forProperty, Object beanInstance)
+            DeserializationContext ctxt, BeanProperty forProperty, Object beanInstance,
+            Boolean optional)
     {
         return findService(serviceType(forProperty), serviceFilter(valueId));
     }
