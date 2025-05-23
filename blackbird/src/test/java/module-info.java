@@ -39,4 +39,8 @@ module tools.jackson.module.blackbird
     opens tools.jackson.module.blackbird.tofix;
     opens tools.jackson.module.blackbird.testutil;
     opens tools.jackson.module.blackbird.testutil.failure;
+
+    provides tools.jackson.databind.JacksonModule with
+        tools.jackson.module.blackbird.BlackbirdModule;
+    uses tools.jackson.databind.JacksonModule;
 }

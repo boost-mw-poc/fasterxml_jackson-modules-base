@@ -37,7 +37,6 @@ public class TestAbstractClasses
     /**********************************************************
      */
 
-    @SuppressWarnings("synthetic-access")
     @Test
     public void testSimpleInteface() throws Exception
     {

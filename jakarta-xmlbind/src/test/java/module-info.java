@@ -25,4 +25,8 @@ module tools.jackson.module.jakarta.xmlbind
     opens tools.jackson.module.jakarta.xmlbind.testutil.failure;
     opens tools.jackson.module.jakarta.xmlbind.tofix;
     opens tools.jackson.module.jakarta.xmlbind.types;
+
+    provides tools.jackson.databind.JacksonModule with
+        tools.jackson.module.jakarta.xmlbind.JakartaXmlBindAnnotationModule;
+    uses tools.jackson.databind.JacksonModule;
 }

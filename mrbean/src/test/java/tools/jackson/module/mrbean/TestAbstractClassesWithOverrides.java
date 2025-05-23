@@ -90,7 +90,6 @@ public class TestAbstractClassesWithOverrides
         verifyBean(bean2);
     }
 
-    @SuppressWarnings("synthetic-access")
     @Test
     public void testReAbstractedMethods() throws Exception
     {
@@ -173,7 +172,6 @@ public class TestAbstractClassesWithOverrides
         }
     }
 
-    @SuppressWarnings("synthetic-access")
     private void verifyBean(Bean bean) {
         assertNotNull(bean);
         assertEquals("abc", bean.getX());

@@ -42,4 +42,8 @@ module tools.jackson.module.afterburner
     opens tools.jackson.module.afterburner.testutil;
     opens tools.jackson.module.afterburner.testutil.failure;
     opens tools.jackson.module.afterburner.util;
+
+    provides tools.jackson.databind.JacksonModule with
+        tools.jackson.module.afterburner.AfterburnerModule;
+    uses tools.jackson.databind.JacksonModule;
 }

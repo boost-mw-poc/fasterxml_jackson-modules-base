@@ -18,4 +18,8 @@ module tools.jackson.module.androidrecord
     opens tools.jackson.module.androidrecord;
     opens tools.jackson.module.androidrecord.testutil.failure;
     opens tools.jackson.module.androidrecord.tofix;
+
+    provides tools.jackson.databind.JacksonModule with
+        tools.jackson.module.androidrecord.AndroidRecordModule;
+    uses tools.jackson.databind.JacksonModule;
 }

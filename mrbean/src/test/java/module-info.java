@@ -20,4 +20,8 @@ module tools.jackson.module.mrbean
 
     // Further, need to open up some packages for JUnit et al
     opens tools.jackson.module.mrbean;
+
+    provides tools.jackson.databind.JacksonModule with
+        tools.jackson.module.mrbean.MrBeanModule;
+    uses tools.jackson.databind.JacksonModule;
 }

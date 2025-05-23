@@ -16,4 +16,8 @@ module tools.jackson.module.noctordeser
 
     // Further, need to open up some packages for JUnit et al
     opens tools.jackson.module.noctordeser;
+
+    provides tools.jackson.databind.JacksonModule with
+        tools.jackson.module.noctordeser.NoCtorDeserModule;
+    uses tools.jackson.databind.JacksonModule;
 }
