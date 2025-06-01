@@ -11,7 +11,7 @@ import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.core.JsonParser;
 import com.fasterxml.jackson.core.JsonToken;
-
+import com.fasterxml.jackson.core.StreamReadFeature;
 import com.fasterxml.jackson.databind.*;
 import com.fasterxml.jackson.databind.cfg.CoercionAction;
 import com.fasterxml.jackson.databind.cfg.CoercionInputShape;
@@ -55,6 +55,7 @@ public class CoerceToBooleanTest extends AfterburnerTestBase
 
     private final ObjectMapper LEGACY_NONCOERCING_MAPPER = afterburnerMapperBuilder()
             .disable(MapperFeature.ALLOW_COERCION_OF_SCALARS)
+            .disable(StreamReadFeature.CLEAR_CURRENT_TOKEN_ON_CLOSE)
             .build();
 
     private final ObjectMapper MAPPER_INT_TO_EMPTY; {
@@ -418,9 +419,9 @@ public class CoerceToBooleanTest extends AfterburnerTestBase
     {
         verifyException(e, "Cannot coerce ", "Cannot deserialize value of type ");
 
+        // 01-Jun-2025, tatu: Now available via exception
+        assertToken(tokenType, e.getCurrentToken());
         JsonParser p = (JsonParser) e.getProcessor();
-
-        assertToken(tokenType, p.currentToken());
 
         final String text = p.getText();
         if (!tokenValue.equals(text)) {
