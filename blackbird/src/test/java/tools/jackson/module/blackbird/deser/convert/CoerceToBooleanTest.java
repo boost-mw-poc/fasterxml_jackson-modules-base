@@ -9,8 +9,10 @@ import org.junit.jupiter.api.Test;
 
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonProperty;
+
 import tools.jackson.core.JsonParser;
 import tools.jackson.core.JsonToken;
+import tools.jackson.core.StreamReadFeature;
 
 import tools.jackson.databind.*;
 import tools.jackson.databind.cfg.CoercionAction;
@@ -55,6 +57,7 @@ public class CoerceToBooleanTest extends BlackbirdTestBase
 
     private final ObjectMapper LEGACY_NONCOERCING_MAPPER = blackbirdMapperBuilder()
             .disable(MapperFeature.ALLOW_COERCION_OF_SCALARS)
+            .disable(StreamReadFeature.CLEAR_CURRENT_TOKEN_ON_CLOSE)
             .build();
 
     private final ObjectMapper MAPPER_INT_TO_EMPTY = blackbirdMapperBuilder()
@@ -416,10 +419,10 @@ public class CoerceToBooleanTest extends BlackbirdTestBase
     {
         verifyException(e, "Cannot coerce ", "Cannot deserialize value of type ");
 
+        // 01-Jun-2025, tatu: Now available via exception
+        assertToken(tokenType, e.getCurrentToken());
+
         JsonParser p = (JsonParser) e.processor();
-
-        assertToken(tokenType, p.currentToken());
-
         final String text = p.getString();
         if (!tokenValue.equals(text)) {
             String textDesc = (text == null) ? "NULL" : quote(text);
