@@ -49,7 +49,6 @@ public class CustomBeanPropertyWriterTest extends BlackbirdTestBase
         }
     }
 
-    @SuppressWarnings("serial")
     static class Only2BeanPropertyWriter extends BeanPropertyWriter
     {
         protected Only2BeanPropertyWriter(BeanPropertyWriter base) {

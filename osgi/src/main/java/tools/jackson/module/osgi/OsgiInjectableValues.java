@@ -29,11 +29,11 @@ public class OsgiInjectableValues extends InjectableValues
         // 23-Feb-2018, tatu: Not sure if and how this could work really...
         return this;
     }
-    
+
     @Override
     public Object findInjectableValue(DeserializationContext ctxt, Object valueId,
             BeanProperty forProperty, Object beanInstance,
-            Boolean optional)
+            Boolean optional, Boolean useInput)
     {
         return findService(serviceType(forProperty), serviceFilter(valueId));
     }
