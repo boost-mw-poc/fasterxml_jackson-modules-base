@@ -70,7 +70,7 @@ public class CustomBeanPropertyWriterTest extends BlackbirdTestBase
         SimpleModule simpleModule = new SimpleModule();
         simpleModule.setSerializerModifier(new Only2BeanSerializerModifier());
         objectMapper.registerModule(simpleModule);
-        objectMapper.setSerializationInclusion(JsonInclude.Include.NON_NULL);
+        objectMapper.setDefaultPropertyInclusion(JsonInclude.Include.NON_NULL);
 
         SampleObject sampleObject = new SampleObject(null, 2, 3);
         String json = objectMapper.writeValueAsString(sampleObject);

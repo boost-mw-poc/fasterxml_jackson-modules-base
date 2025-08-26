@@ -83,7 +83,7 @@ public class NullPropertiesTest
     public void testNullProps() throws Exception
     {
         ObjectMapper mapper = getJaxbMapper();
-        mapper.setSerializationInclusion(JsonInclude.Include.NON_NULL);
+        mapper.setDefaultPropertyInclusion(JsonInclude.Include.NON_NULL);
         assertEquals("{\"x\":\"y\"}", mapper.writeValueAsString(new Bean()));
     }
 
