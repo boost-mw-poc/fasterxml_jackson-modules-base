@@ -117,7 +117,8 @@ public class AndroidRecordModule extends SimpleModule
     public PotentialCreator findPreferredCreator(MapperConfig<?> config,
             AnnotatedClass valueClass,
             List<PotentialCreator> declaredConstructors,
-            List<PotentialCreator> declaredFactories)
+            List<PotentialCreator> declaredFactories,
+            Optional<PotentialCreator> zeroParamsConstructor)
     {
       PotentialCreator foundCreator = null;
       if (AndroidRecordModule.isDesugaredRecordClass(valueClass.getRawType())) {
