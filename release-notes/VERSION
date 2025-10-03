@@ -22,25 +22,7 @@ Active maintainers:
 === Releases ===
 ------------------------------------------------------------------------
 
-3.0.0-rc10 (19-Sep-2025)
-3.0.0-rc9 (05-Sep-2025)
-3.0.0-rc8 (13-Aug-2025)
-3.0.0-rc7 (08-Aug-2025)
-3.0.0-rc6 (18-Jul-2025)
-3.0.0-rc5 (22-May-2025)
-3.0.0-rc4 (10-May-2025)
-
-No changes since rc3
-
-3.0.0-rc3 (13-Apr-2025)
-
-- Branch rename "master" -> "3.x" [JSTEP-12]
-
-3.0.0-rc2 (28-Mar-2025)
-
-No changes since rc1
-
-3.0.0-rc1 (07-Mar-2025)
+3.0.0 (03-Oct-2025)
 
 #26: Improve handling of parent class loader for generated classes
  (suggested by hatgaei@github)
@@ -54,3 +36,4 @@ No changes since rc1
 #282 (afterburner) Remove shade plugin from 3.0 Afterburner
 - Minimum Java baseline: Java 17
 - Maven artifact packaging changed to "jar" from "bundle" (to retain 'module-info.class')
+- Branch rename "master" -> "3.x" [JSTEP-12]
