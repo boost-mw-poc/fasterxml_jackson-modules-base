@@ -22,17 +22,6 @@ not datatype, data format, or JAX-RS provider modules.
     </license>
   </licenses>
 
-  <!-- 03-Oct-2025, tatu: Should NOT be needed (available via parent):
-              but seems to be
-    -->
-  <developers>
-    <developer>
-      <id>cowtowncoder</id>
-      <name>Tatu Saloranta</name>
-      <email>tatu@fasterxml.com</email>
-    </developer>
-  </developers>
-
   <modules>
     <module>afterburner</module>
     <module>android-record</module>
