@@ -32,6 +32,8 @@ No changes since 3.0.0
  (suggested by hatgaei@github)
 #28: Use ByteBuddy (instead of "raw" ASM) for Mr Bean
  (contributed by Georgios A))
+#29: Use ByteBuddy (instead of "raw" ASM) for Afterburner
+ (contributed by Georgios A))
 #40: Remove `jackson-module-paranamer` from Jackson 3.0
 #182: Rename "com.fasterxml.jackson" -> "tools.jackson"
 #225: Afterburner 3.0 fails to handle interface "default" methods
