@@ -36,12 +36,14 @@ No changes since 3.0.0
  (suggested by hatgaei@github)
 #28: Use ByteBuddy (instead of "raw" ASM) for Mr Bean
  (contributed by Georgios A))
+#29: Use ByteBuddy (instead of "raw" ASM) for Afterburner
+ (contributed by Georgios A))
 #40: Remove `jackson-module-paranamer` from Jackson 3.0
 #182: Rename "com.fasterxml.jackson" -> "tools.jackson"
 #225: Afterburner 3.0 fails to handle interface "default" methods
  (contributed by Georgios A))
 #269: Change 3.0 to use `module-info.java` directly [JSTEP-11]
-#282 (afterburner) Remove shade plugin from 3.0 Afterburner
+#284 (afterburner) Remove shade plugin from 3.0 Afterburner
 - Minimum Java baseline: Java 17
 - Maven artifact packaging changed to "jar" from "bundle" (to retain 'module-info.class')
 - Branch rename "master" -> "3.x" [JSTEP-12]
