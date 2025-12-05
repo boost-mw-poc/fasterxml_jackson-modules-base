@@ -12,11 +12,11 @@ import static org.junit.jupiter.api.Assertions.assertEquals;
 // but does not seem to fail as expected
 public class AfterburnerGenericInterface314Test extends AfterburnerTestBase
 {
-    interface A314<T> {
+    public interface A314<T> {
         T getBody();
     }
 
-    static class MD314 implements A314<String> {
+    public static class MD314 implements A314<String> {
         private String body;
 
         public MD314(String b) {
