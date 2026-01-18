@@ -1,7 +1,8 @@
-package com.fasterxml.jackson.module.spisubtypes;
+package tools.jackson.module.spisubtypes;
 
 import com.fasterxml.jackson.core.Version;
 import com.fasterxml.jackson.databind.Module;
+import com.fasterxml.jackson.module.spisubtypes.PackageVersion;
 
 /**
  * Subtypes module for registering subtypes without annotating the parent class.

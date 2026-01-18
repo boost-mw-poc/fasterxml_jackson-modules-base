@@ -1,4 +1,4 @@
-package com.fasterxml.jackson.module.spisubtypes;
+package tools.jackson.module.spisubtypes;
 
 import java.util.Objects;
 
@@ -7,6 +7,10 @@ import com.fasterxml.jackson.annotation.JsonTypeInfo;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.fasterxml.jackson.databind.json.JsonMapper;
 import com.google.auto.service.AutoService;
+
+import tools.jackson.module.spisubtypes.JacksonSubType;
+import tools.jackson.module.spisubtypes.SubtypesModule;
+
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;

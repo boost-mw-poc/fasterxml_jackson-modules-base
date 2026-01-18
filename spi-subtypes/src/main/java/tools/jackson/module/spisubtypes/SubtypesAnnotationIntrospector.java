@@ -1,4 +1,4 @@
-package com.fasterxml.jackson.module.spisubtypes;
+package tools.jackson.module.spisubtypes;
 
 import java.util.ArrayList;
 import java.util.Collections;
@@ -12,6 +12,7 @@ import com.fasterxml.jackson.core.Version;
 import com.fasterxml.jackson.databind.AnnotationIntrospector;
 import com.fasterxml.jackson.databind.introspect.Annotated;
 import com.fasterxml.jackson.databind.jsontype.NamedType;
+import com.fasterxml.jackson.module.spisubtypes.PackageVersion;
 
 /**
  * Annotation introspector that handles {@link JacksonSubType} annotation.

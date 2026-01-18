@@ -1,4 +1,4 @@
-package com.fasterxml.jackson.module.spisubtypes;
+package tools.jackson.module.spisubtypes;
 
 import java.lang.annotation.ElementType;
 import java.lang.annotation.Retention;

@@ -40,6 +40,7 @@ not datatype, data format, or JAX-RS provider modules.
 <!-- 29-Jan-2018, tatu: No need for this, with Java 8
     <module>paranamer</module>
 -->
+    <module>spi-subtypes</module>
   </modules>
 
   <url>https://github.com/FasterXML/jackson-modules-base</url>
