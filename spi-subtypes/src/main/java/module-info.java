@@ -1,8 +1,13 @@
-module com.fasterxml.jackson.module.spisubtypes {
-
-    requires com.fasterxml.jackson.core;
+// SPI Subtypes Main artifact Module descriptor
+module tools.jackson.module.spisubtypes
+{
     requires com.fasterxml.jackson.annotation;
-    requires com.fasterxml.jackson.databind;
 
-    exports com.fasterxml.jackson.module.spisubtypes;
+    requires tools.jackson.core;
+    requires tools.jackson.databind;
+
+    exports tools.jackson.module.spisubtypes;
+
+    provides tools.jackson.databind.JacksonModule with
+        tools.jackson.module.spisubtypes.SubtypesModule;
 }
