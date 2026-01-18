@@ -56,6 +56,16 @@
         <groupId>com.google.code.maven-replacer-plugin</groupId>
         <artifactId>replacer</artifactId>
       </plugin>
+      <!-- 18-Jan-2026: Run tests on classpath (not module path) because this module
+           uses ServiceLoader.load() dynamically and JPMS requires explicit 'uses' declarations
+           for each service type, which isn't possible when types are determined at runtime -->
+      <plugin>
+        <groupId>org.apache.maven.plugins</groupId>
+        <artifactId>maven-surefire-plugin</artifactId>
+        <configuration>
+          <useModulePath>false</useModulePath>
+        </configuration>
+      </plugin>
       <!-- 29-Apr-2025, tatu: SBOM generation [JSTEP-14] -->
       <plugin>
         <groupId>org.cyclonedx</groupId>
