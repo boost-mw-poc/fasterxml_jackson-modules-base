@@ -1,7 +1,7 @@
-package com.fasterxml.jackson.module.spisubtypes;
+package tools.jackson.module.spisubtypes;
 
-import com.fasterxml.jackson.core.Version;
-import com.fasterxml.jackson.databind.Module;
+import tools.jackson.core.Version;
+import tools.jackson.databind.JacksonModule;
 
 /**
  * Subtypes module for registering subtypes without annotating the parent class.
@@ -9,7 +9,7 @@ import com.fasterxml.jackson.databind.Module;
  *
  * @since 2.21 / 3.1
  */
-public class SubtypesModule extends Module {
+public class SubtypesModule extends JacksonModule {
 
     protected SubtypesAnnotationIntrospector _introspector;
 
@@ -18,7 +18,7 @@ public class SubtypesModule extends Module {
     }
 
     public SubtypesModule(SubtypesAnnotationIntrospector introspector) {
-        this._introspector = introspector;
+        _introspector = introspector;
     }
 
     @Override
