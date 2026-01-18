@@ -6,7 +6,6 @@ import java.lang.annotation.RetentionPolicy;
 import java.lang.annotation.Target;
 
 import com.fasterxml.jackson.annotation.JacksonAnnotation;
-import com.fasterxml.jackson.annotation.JsonSubTypes;
 import com.fasterxml.jackson.annotation.JsonTypeName;
 
 /**
@@ -16,7 +15,7 @@ import com.fasterxml.jackson.annotation.JsonTypeName;
  * name will be constructed by type id mechanism.
  * Default name is usually based on class name.
  * <p>
- * It's the same as {@link  JsonSubTypes.Type}.
+ * It's the same as {@link com.fasterxml.jackson.annotation.JsonSubTypes.Type}.
  *
  * @since 2.21 / 3.1
  */

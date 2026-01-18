@@ -7,12 +7,12 @@ import java.util.ServiceLoader;
 import java.util.concurrent.ConcurrentHashMap;
 import java.util.function.Function;
 
-import com.fasterxml.jackson.core.Version;
+import tools.jackson.core.Version;
 
-import com.fasterxml.jackson.databind.AnnotationIntrospector;
-import com.fasterxml.jackson.databind.introspect.Annotated;
-import com.fasterxml.jackson.databind.jsontype.NamedType;
-import com.fasterxml.jackson.module.spisubtypes.PackageVersion;
+import tools.jackson.databind.AnnotationIntrospector;
+import tools.jackson.databind.cfg.MapperConfig;
+import tools.jackson.databind.introspect.Annotated;
+import tools.jackson.databind.jsontype.NamedType;
 
 /**
  * Annotation introspector that handles {@link JacksonSubType} annotation.
@@ -24,7 +24,10 @@ import com.fasterxml.jackson.module.spisubtypes.PackageVersion;
  *
  * @since 2.21 / 3.1
  */
-public class SubtypesAnnotationIntrospector extends AnnotationIntrospector {
+public class SubtypesAnnotationIntrospector extends AnnotationIntrospector
+{
+    private static final long serialVersionUID = 3L;
+
     private final ConcurrentHashMap<Class<?>, List<NamedType>> subtypes = new ConcurrentHashMap<>();
 
     @Override
@@ -33,7 +36,7 @@ public class SubtypesAnnotationIntrospector extends AnnotationIntrospector {
     }
 
     @Override
-    public List<NamedType> findSubtypes(Annotated a) {
+    public List<NamedType> findSubtypes(MapperConfig<?> config, Annotated a) {
         registerTypes(a.getRawType());
 
         List<NamedType> list1 = _findSubtypes(a.getRawType(), a::getAnnotation);
