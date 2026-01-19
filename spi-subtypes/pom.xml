@@ -59,6 +59,18 @@
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-compiler-plugin</artifactId>
             </plugin>
+            <!-- 19-Jan-2026: Tests must run on classpath (not module path)
+                 because ServiceLoader.load() requires caller module to
+                 declare 'uses' for each service type, which isn't possible
+                 when service types are determined dynamically at runtime.
+              -->
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-surefire-plugin</artifactId>
+                <configuration>
+                    <useModulePath>false</useModulePath>
+                </configuration>
+            </plugin>
         </plugins>
     </build>
 </project>
