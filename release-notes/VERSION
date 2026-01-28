@@ -22,7 +22,7 @@ Active maintainers:
 === Releases ===
 ------------------------------------------------------------------------
 
-3.1.0 (not yet released)
+3.1.0-rc1 (27-Jan-2026)
 
 #229: Add `jackson-module-spi-subtypes` module
  (contributed by @black-06)
