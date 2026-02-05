@@ -25,8 +25,10 @@ Active maintainers:
 
 2.21.0 (18-Jan-2026)
 
-No changes since 2.20
+#229: Add `jackson-module-spi-subtypes` module
+ (contributed by @black-06)
 
+2.20.2 (19-Jan-2026)
 2.20.1 (30-Oct-2025)
 
 No changes since 2.20.0
