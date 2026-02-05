@@ -19,7 +19,9 @@ Currently included are:
 * [Mr Bean](mrbean/)
 * [No-Constructor-Deserialization](no-ctor-deser/)
 * [OSGi](osgi/)
-* [Paranamer](paranamer/)
+* [Paranamer](paranamer/) (2.x only)
+    * discontinued so no 3.x versions exist
+* [SPI subtypes](spi-subtypes) (2.21+)
 
 ## Status
 
