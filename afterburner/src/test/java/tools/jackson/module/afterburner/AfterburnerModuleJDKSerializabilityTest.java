@@ -2,11 +2,14 @@ package tools.jackson.module.afterburner;
 
 import java.io.*;
 
+import org.junit.jupiter.api.Test;
+
 import tools.jackson.databind.ObjectMapper;
 
 import static org.junit.jupiter.api.Assertions.*;
 
-public class AfterburnerModuleJDKSerializabilityTest extends AfterburnerTestBase
+public class AfterburnerModuleJDKSerializabilityTest
+    extends AfterburnerTestBase
 {
     static class Point {
         public int x, y;
@@ -14,6 +17,8 @@ public class AfterburnerModuleJDKSerializabilityTest extends AfterburnerTestBase
 
     // First: verify that newly constructed module (registered to Mapper)
     // can be JDK serialized, deserialized
+
+    @Test
     public void testMapperWithoutUse() throws Exception
     {
         ObjectMapper mapper = newAfterburnerMapper();
@@ -26,6 +31,7 @@ public class AfterburnerModuleJDKSerializabilityTest extends AfterburnerTestBase
     }
 
     // 24-May-2020, tatu: Fine with 3.0
+    @Test
     public void testMapperAfterUse() throws Exception
     {
         ObjectMapper mapper = newAfterburnerMapper();
