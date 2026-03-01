@@ -6,6 +6,8 @@ Extension plugs in using standard `Module` interface, and requires Jackson 2.0 o
 
 Module is licensed under [Apache License 2.0](http://www.apache.org/licenses/LICENSE-2.0.txt)
 
+[![Maven Central](https://img.shields.io/maven-central/v/tools.jackson.module/jackson-module-mrbean.svg?label=Maven%20Central)](https://central.sonatype.com/artifact/tools.jackson.module/jackson-module-mrbean)
+
 ## Usage
 
 ### Maven dependency

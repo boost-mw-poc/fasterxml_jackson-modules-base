@@ -1,5 +1,7 @@
 # jackson-module-spi-subtypes
 
+[![Maven Central](https://img.shields.io/maven-central/v/tools.jackson.module/jackson-module-spi-subtypes.svg?label=Maven%20Central)](https://central.sonatype.com/artifact/tools.jackson.module/jackson-module-spi-subtypes)
+
 Registering subtypes without annotating the parent class,
 see [this](https://github.com/FasterXML/jackson-databind/issues/2104).
 
@@ -29,7 +31,7 @@ public interface Parent {
 ```java
 package org.example;
 
-import com.fasterxml.jackson.module.spisubtypes.JacksonSubType;
+import tools.jackson.module.spisubtypes.JacksonSubType;
 
 @JacksonSubType("first-child")
 public class FirstChild {
@@ -54,7 +56,7 @@ Alternatively, you can also use the `auto-service` to auto-generate these files:
 ```java
 package org.example;
 
-import com.fasterxml.jackson.module.spisubtypes.JacksonSubType;
+import tools.jackson.module.spisubtypes.JacksonSubType;
 import com.google.auto.service.AutoService;
 
 @AutoService(Parent.class)

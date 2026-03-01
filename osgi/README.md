@@ -1,5 +1,7 @@
 # Jackson OSGi injection module
 
+[![Maven Central](https://img.shields.io/maven-central/v/tools.jackson.module/jackson-module-osgi.svg?label=Maven%20Central)](https://central.sonatype.com/artifact/tools.jackson.module/jackson-module-osgi)
+
 This module provides a way to inject OSGI services into deserialized objects.
 Thanks to the _JacksonInject_ annotations, the _OsgiJacksonModule_ will search for the required service in the OSGI service registry and injects it in the object while deserializing.
 

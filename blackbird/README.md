@@ -26,6 +26,8 @@ have a monomorphic call profile and easily inline for maximum performance.
 
 ## Status
 
+[![Maven Central](https://img.shields.io/maven-central/v/tools.jackson.module/jackson-module-blackbird.svg?label=Maven%20Central)](https://central.sonatype.com/artifact/tools.jackson.module/jackson-module-blackbird)
+
 Blackbird is new and not as mature as Afterburner, but has been tested and runs well.
 The code is written to fail-fast and explode on the tarmac rather than later at runtime.
 
