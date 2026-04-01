@@ -18,7 +18,7 @@ To use module on Maven-based projects, use following dependency:
 <dependency>
   <groupId>tools.jackson.module</groupId>
   <artifactId>jackson-module-mrbean</artifactId>
-  <version>3.0.0-SNAPSHOT</version>
+  <version>3.1.1</version>
 </dependency>
 ```
 
