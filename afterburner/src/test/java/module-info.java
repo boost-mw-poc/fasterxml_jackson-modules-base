@@ -41,7 +41,7 @@ module tools.jackson.module.afterburner
     opens tools.jackson.module.afterburner.ser.filter;
     opens tools.jackson.module.afterburner.testutil;
     opens tools.jackson.module.afterburner.testutil.failure;
-    opens tools.jackson.module.afterburner.tofix;
+    //opens tools.jackson.module.afterburner.tofix;
     opens tools.jackson.module.afterburner.util;
 
     provides tools.jackson.databind.JacksonModule with
