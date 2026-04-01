@@ -1,10 +1,9 @@
-package tools.jackson.module.afterburner.tofix;
+package tools.jackson.module.afterburner.ser;
 
 import org.junit.jupiter.api.Test;
 
 import tools.jackson.databind.ObjectMapper;
 import tools.jackson.module.afterburner.AfterburnerTestBase;
-import tools.jackson.module.afterburner.testutil.failure.JacksonTestFailureExpected;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
@@ -29,7 +28,6 @@ public class AfterburnerGenericInterface314Test extends AfterburnerTestBase
         }
     }
 
-    //@JacksonTestFailureExpected
     @Test
     public void testMapperAfterUse() throws Exception
     {
