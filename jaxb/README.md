@@ -5,13 +5,15 @@ It is most often used to make it easier to reuse existing data beans that used w
 
 ## Maven dependency
 
+[![Maven Central](https://img.shields.io/maven-central/v/tools.jackson.module/jackson-module-jaxb-annotations.svg?label=Maven%20Central)](https://central.sonatype.com/artifact/tools.jackson.module/jackson-module-jaxb-annotations)
+
 To use this extension on Maven-based projects, use following dependency:
 
 ```xml
 <dependency>
   <groupId>tools.jackson.module</groupId>
   <artifactId>jackson-module-jaxb-annotations</artifactId>
-  <version>3.0.0-SNAPSHOT</version>
+  <version>3.1.1</version>
 </dependency>
 ```
 

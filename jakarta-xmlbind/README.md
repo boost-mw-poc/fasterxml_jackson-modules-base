@@ -12,13 +12,15 @@ For older `java.xml.bind` package, look at "jackson-module-jaxb-annotations".
 
 ## Maven dependency
 
+[![Maven Central](https://img.shields.io/maven-central/v/tools.jackson.module/jackson-module-jakarta-xmlbind-annotations.svg?label=Maven%20Central)](https://central.sonatype.com/artifact/tools.jackson.module/jackson-module-jakarta-xmlbind-annotations)
+
 To use this extension on Maven-based projects, use following dependency:
 
 ```xml
 <dependency>
   <groupId>tools.jackson.module</groupId>
   <artifactId>jackson-module-jakarta-xmlbind-annotations</artifactId>
-  <version>3.0.0-SNAPSHOT</version>
+  <version>3.1.1</version>
 </dependency>
 ```
 
