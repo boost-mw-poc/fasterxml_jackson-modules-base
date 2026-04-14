@@ -62,16 +62,22 @@ never published.</description>
         </configuration>
       </plugin>
       <!-- Sonatype Central publishing plugin is bound as a build extension in
-           the parent chain and replaces maven-deploy for releases. Skipping
-           maven-deploy alone is not enough: the `injected-central-publishing`
+           the parent chain and replaces maven-deploy for releases/snapshots.
+           Skipping maven-deploy is not enough: the `injected-central-publishing`
            execution still runs and fails with "packaging did not assign a file
-           to the build artifact" because default-jar is unbound above. -->
+           to the build artifact" because default-jar is unbound above. The
+           plugin's own `skipPublishing` flag is checked too late — the mojo
+           validates the artifact file before honoring it — so we unbind the
+           execution phase entirely instead. -->
       <plugin>
         <groupId>org.sonatype.central</groupId>
         <artifactId>central-publishing-maven-plugin</artifactId>
-        <configuration>
-          <skipPublishing>true</skipPublishing>
-        </configuration>
+        <executions>
+          <execution>
+            <id>injected-central-publishing</id>
+            <phase>none</phase>
+          </execution>
+        </executions>
       </plugin>
       <!-- Felix bundle plugin: the parent POM binds two explicit executions
            (`bundle-manifest` and `default-install`) so we override both by id. -->
