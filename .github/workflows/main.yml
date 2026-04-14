@@ -52,7 +52,10 @@ jobs:
       run: ./mvnw -B -q -ff -DskipTests -ntp source:jar deploy
     - name: Generate code coverage
       if: ${{ matrix.release_build && github.event_name != 'pull_request' }}
-      run: ./mvnw -B -q -ff -ntp test
+      # Exclude the `*-tests` integration modules: they have no main sources,
+      # so they contribute zero to jacoco coverage, but their test suites
+      # (Afterburner/Blackbird classpath-mode integration tests) are slow.
+      run: ./mvnw -B -q -ff -ntp -pl '!afterburner-tests,!blackbird-tests' test
     - name: Publish code coverage
       if: ${{ matrix.release_build && github.event_name != 'pull_request' }}
       uses: codecov/codecov-action@57e3a136b779b570ffcdbf80b3bdc90e7fab3de2 # v6.0.0
