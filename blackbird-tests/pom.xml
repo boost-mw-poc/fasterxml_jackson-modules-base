@@ -66,6 +66,15 @@ and is never published.</description>
           <skip>true</skip>
         </configuration>
       </plugin>
+      <!-- See afterburner-tests/pom.xml for why this is required in addition
+           to skipping maven-deploy-plugin. -->
+      <plugin>
+        <groupId>org.sonatype.central</groupId>
+        <artifactId>central-publishing-maven-plugin</artifactId>
+        <configuration>
+          <skipPublishing>true</skipPublishing>
+        </configuration>
+      </plugin>
       <plugin>
         <groupId>org.apache.felix</groupId>
         <artifactId>maven-bundle-plugin</artifactId>
