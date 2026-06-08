@@ -22,7 +22,11 @@ Active maintainers:
 === Releases ===
 ------------------------------------------------------------------------
 
-3.2.0 (not yet released)
+3.3.0 (not yet released)
+
+No changes since 3.2
+
+3.2.0 (08-Jun-2026)
 
 #314: (afterburner) ObjectMapper with "jackson-module-afterburner":
   `java.lang.IllegalStateException`: Multiple definitions of method getBody found
@@ -41,10 +45,6 @@ Active maintainers:
  (fix by @cowtowncoder, w/ Claude code)
 - Removed project Android SDK level overrides, use defaults (ASDK 34)
  (affects `android-records` module's verification; was validating ASDK 26)
-
-3.1.1 (not yet released)
-
-No changes since 3.1.0
 
 3.1.4 (29-May-2026)
 
